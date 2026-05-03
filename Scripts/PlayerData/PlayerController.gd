@@ -2,13 +2,12 @@ extends CharacterBody2D
 
 @onready var tile_map = get_parent().get_node("TileMapLayer") # путь к TileMap
 
-var cell_size = Vector2(16, 16)   # размер клетки
-var target_cell = Vector2i.ZERO   # целевая клетка по шагам
+var cell_size = Vector2(16, 16)
+var target_cell = Vector2i.ZERO 
 var is_moving = false
 var current_cell = Vector2i.ZERO
 
 func _ready():
-	# Начальная позиция (выравнивание по сетке)
 	current_cell = tile_map.local_to_map(position)
 	position = tile_map.map_to_local(current_cell)
 	target_cell = current_cell
