@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dp0ukxrsxjskf"]
+
+[ext_resource type="Script" uid="uid://dlgpa85fm8mat" path="res://Scripts/PlayerData/PlayerController.gd" id="1_rpqav"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qbkls"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rpqav"]
+radius = 1.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=313754003]
+scale = Vector2(2, 2)
+script = ExtResource("1_rpqav")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1368541493]
+scale = Vector2(1.9396262, 1.9396267)
+mesh = SubResource("SphereMesh_qbkls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=990305988]
+shape = SubResource("CircleShape2D_rpqav")
